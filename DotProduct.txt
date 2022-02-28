@@ -1,0 +1,42 @@
+function Dot_product (var v1:ARRAY_OF INTEGER[] , v2:ARRAY_OF INTEGER[] ):INTEGER
+VAR 
+   i,j:INTEGER;
+   ps :INTEGER;
+BEGIN
+    FOR i FROM 0 TO v1.length DO 
+     FOR j FROM 0 TO v2.length DO 
+     ps := ps+(v1[i]*v2[j])
+     END_FOR
+    END_FOR
+    write(ps)
+END
+
+
+
+ALGORITHM Orthogonal 
+var 
+  V1:ARRAY_OF INTEGER[]
+  V2:ARRAY_OF INTEGER[]
+  i,j:INTEGER
+  orthogonal:boolean
+  P:INTEGER
+BEGIN
+     FOR i FROM 0 TO V1.length DO 
+      read(V1[i])
+     FOR j FROM 0 TO V2.length DO
+      read(V2[j])
+     P=Dot_product(V1,V2)
+      IF (P=0) DO
+      orthogonal :=true
+      ELSE 
+       IF(P<>0) DO 
+        orthogonal;=false
+      END_IF
+     END_FOR
+     END_FOR
+END
+    
+  
+
+    
+    
